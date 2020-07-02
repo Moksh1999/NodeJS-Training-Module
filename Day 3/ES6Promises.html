@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <script>
+          function multiplyTwo(a,b){
+          let p=new Promise(function(resolve,reject){
+            if(a>=0 && b>=0){
+                resolve(a*b);
+            }
+            else{
+                reject('Not a valid Integer');
+            }
+          });
+          return p;
+          }
+
+          setTimeout(()=>{
+            multiplyTwo(10,20).then(succes1).catch(err);
+          },1000);
+        
+          
+          setTimeout(()=>{
+            multiplyTwo(-10,20).then(succes1).catch(err);
+          },1000);
+
+
+          function succes1(result){
+              alert(result);
+          }
+
+          function err(error){
+              alert(error);
+          }
+          
+      </script>
+  </body>
+</html>

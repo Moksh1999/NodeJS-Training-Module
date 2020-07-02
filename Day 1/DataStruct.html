@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      
+        var car = {
+          type:"fiat",
+          model:"2015",
+          engine:"petrol"
+        }
+        document.getElementById("demo").innerHTML="car type = "+car.type;
+
+        //ARRAYS
+        document.write("ARRAYS");
+        document.write("<br><br><br>");
+
+        var fruits=["mango","apple","banana"];
+        document.write(fruits.sort());
+        document.write("<br><br><br>");
+        document.write(fruits.reverse());
+        fruits.push("Orange");
+        document.write("<br><br><br>");
+        document.write(fruits);
+        fruits.pop();
+        document.write("<br><br><br>");
+        document.write(fruits);
+
+        //STRINGS
+        document.write("<br><br><br>");
+        document.write("STRING");
+        document.write("<br><br><br>");
+
+        var str="All is well";
+        document.write(str.length);
+        document.write("<br><br><br>");
+        document.write(str.indexOf("is"));
+        document.write("<br><br><br>");
+        document.write(str.search("is"));
+        document.write("<br><br><br>");
+        document.write(str.substring(2,9));
+        document.write("<br><br><br>");
+        document.write(str.replace("is","are"));
+        document.write("<br><br><br>");
+        document.write(str.toUpperCase());
+    </script>
+  </body>
+</html>

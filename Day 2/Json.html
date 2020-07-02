@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="for"></p>
+    <p id="demo2"></p>
+      <script>
+        x="";
+        //JSON to String
+          var details = {
+            "name" : "John",
+            "city" : "NYC",
+            "age" : 20,
+            "work" : ["student","intern","developer"]
+          };
+          var check=JSON.stringify(details);
+          document.getElementById("demo").innerHTML=check;
+
+          for(var i in details.work)
+          {
+            x+=details.work[i]+"<br>";
+          }
+          document.getElementById("for").innerHTML=x;
+            //STRING to JSON
+            var str='{"name":"Moksh","age":20,"city":"Patiala"}'
+            var obj=JSON.parse(str);
+            document.write("<br><br>");
+            document.getElementById("demo2").innerHTML+=obj.name+" "+obj.city+" "+obj.age;
+      </script>
+  </body>
+</html>

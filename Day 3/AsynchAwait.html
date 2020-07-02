@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <script>
+         async function multiply(a,b){
+              let p=new Promise((res,rej)=>{
+                if(a>=0)
+                {
+                    res(a*b);
+                }
+                else{
+                    rej('Something went wrong');
+                }
+              });
+              
+              var x=await p;
+              console.log(x);
+              var y=await x;
+              console.log(x*x);
+          }
+
+          multiply(10,20);
+
+                
+      </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <script>
+          function multiplyTwo(a,b){
+              let p=new Promise((resolve,reject)=>{
+                    if(a>=0 && b>=0){
+                        resolve(a*b);
+                    }
+                    else{
+                        reject('Not a valid positive integer');
+                    }
+              })
+              return p;
+          }
+
+
+          multiplyTwo(10,20).then(
+              function(result)
+              {
+                  alert(result);
+                  return multiplyTwo(result,result);
+              }
+          ).then(
+            function(result)
+              {
+                  alert(result);
+                  return multiplyTwo(result,result);
+              }
+          )
+      </script>
+  </body>
+</html>

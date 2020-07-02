@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="check"></p>
+    <p id="checker"></p>
+    <p id="for"></p>
+    <button type="button" id="btn" name="button">Print 0-10</button>
+    <script type="text/javascript">
+      var x=new Date().getHours();
+      if(x<12)
+      {
+        document.getElementById("check").innerHTML="Good Morning";
+      }
+      else if(x>=12 && x<16)
+      {
+        document.getElementById("check").innerHTML="Good Afternoon";
+      }
+      else if(x>=16){
+        document.getElementById("check").innerHTML="Good Evening";
+      }
+
+      //printing Day
+      switch(new Date().getDay())
+      {
+        case 0:
+          document.getElementById("checker").innerHTML="Today is Sunday";
+          break;
+        case 1:
+          document.getElementById("checker").innerHTML="Today is Monday";
+          break;
+        case 2:
+          document.getElementById("checker").innerHTML="Today is Tuesday";
+          break;
+        case 3:
+          document.getElementById("checker").innerHTML="Today is Wednesday";
+          break;
+        case 4:
+          document.getElementById("checker").innerHTML="Today is Thursday";
+          break;
+        case 5:
+          document.getElementById("checker").innerHTML="Today is Friday";
+          break;
+        case 6:
+          document.getElementById("checker").innerHTML="Today is Saturday";
+          break;
+      }
+
+      document.getElementById('btn').addEventListener("click",displaydemo);
+      function displaydemo(){
+      for(var i=0;i<10;i++)
+      {
+        document.getElementById("for").innerHTML+=i+"<br>";
+      }
+    }
+
+    </script>
+
+  </body>
+</html>
